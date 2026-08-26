@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 
-test('deve exibir o slogan na homepage', async ({ page }) => {
+test('deve validar o titulo na aba do navegador', async ({ page }) => {
   await page.goto('http://localhost:3000/')
 
   // Expect a title "to contain" a substring.
@@ -16,15 +16,11 @@ test('deve exibir o slogan na homepage', async ({ page }) => {
 
 })
 
-/*
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/')
+test('deve exibir o slogan na homepage', async ({ page }) => {
+  await page.goto('http://localhost:3000/')
 
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click()
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible()
+ const slogan = page.getByRole('heading', {name: "Sua viagem para a Lua começa aqui."})
+ await expect(slogan).toBeVisible()
 })
-*/
+
 
