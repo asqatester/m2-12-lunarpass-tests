@@ -1,0 +1,53 @@
+
+## Home Page
+
+Botão Buscar missões
+
+- Possui a tag html button e o texto "Buscar missões", o que já é o suficiene para construir um bom locator.
+
+Checkbox de bases lumnares
+
+- Possui texto no Span na qual eu consigo identificar a base e com / .. do xpath posso chegar no label para clicar no botão.
+
+- Se tiver um ID por base, fica mais prático;
+
+Caixa de seleção para ordenar data de missões
+
+- Select simples do html com options e tb possui id
+
+## Pagina de resultados (/missions)
+
+Botão refinar
+
+- Possui a tag html button e o texto "refinar", o que já é o suficiente para construir um bom locator.
+
+- O filtro de bases lunares já tem id
+
+- "Ordenar por" está usando select padrão do html
+
+OBS: seria melhor padronizar os elementos de caixa de seleção de opções conforme exemplo do filtro de bases lunares da página /missions. É mais elegante e tem um design mais sofisticado.
+
+Lista de missões
+
+Item de cada missão
+
+- A lista de missões é representada por uma UL, seria ótimo se cada li tiver uma propriedade com uma informação relacionada ao códgo da missão.
+- Título ok, usa um h3
+- Descrição ok, usa um p
+- Data de ida e volta, ruim porque é um span pobre e sem graça, poderia ter um ID
+- Estadia, ruim porque é um span pobre e sem graça, poderia ter um ID
+- Disponibilidade de assentos, também é muito, poderia ter um ID
+-O botão reservar possui no atributo href o código da missão (a[href="/booking/LP-0127A"]), o que torna o processo de automação muito simples.
+
+Caixa de resultado quando nehuma missão é encontrada
+
+- verificar se é acessível para testes automatizados, e se possivel adicionar algum identificador
+
+##  Página da missão (/booking/LP-0127A)
+
+- Os botões de escolha de assento, já tem ária-label com informações relevantes.
+
+- Aside de resumo não tem identificador para nehuma das informações
+
+- Na sessão de reserva confirmada, cada informação relevante da passagem pode ter um identificador exclusivo. isso vai facilitar muito as verificações.
+
